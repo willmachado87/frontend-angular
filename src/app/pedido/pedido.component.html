@@ -1,0 +1,76 @@
+<div class="container text-center" *ngIf="usuario != null">
+
+    <div class="row">
+        <div class="col-sm-4  ">
+            <p>Nome: </p>
+        </div>
+        <div class="col-sm-8">
+            <input type="text" style="width: 99%;" [(ngModel)]="usuario.nome">
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-4  ">
+            <p>Cep: </p>
+        </div>
+        <div class="col-sm-8">
+            <input type="text" style="width: 99%;" [(ngModel)]="cep.cep" (blur)="getCep()">
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-4  ">
+            <p>Endereço: </p>
+        </div>
+        <div class="col-sm-8">
+            <input style="width: 99%;" [(ngModel)]="cep.logradouro">
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4  ">
+            <p>Numero: </p>
+        </div>
+        <div class="col-sm-8">
+            <input type="text" style="width: 99%;" [(ngModel)]="numero">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4  ">
+            <p>Cidade: </p>
+        </div>
+        <div class="col-sm-8">
+            <input type="text" style="width: 99%;" [(ngModel)]="cep.localidade">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4  ">
+            <p>UF: </p>
+        </div>
+        <div class="col-sm-8">
+            <input type="text" style="width: 99%;" [(ngModel)]="cep.uf">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <p>Bairro: </p>
+        </div>
+        <div class="col-sm-8">
+            <input type="text" style="width: 99%;" [(ngModel)]="cep.bairro">
+        </div>
+    </div>
+    <br>    
+    <button class="btn btn-warning btCeva" (click)="postPedido()">Enviar Pedido</button>
+</div>
+
+<div class="container text-center" *ngIf="usuario == null">
+    <p> você precisa estar logado para continuar</p>
+    
+</div>

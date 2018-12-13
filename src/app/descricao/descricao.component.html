@@ -1,0 +1,14 @@
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-4  ">
+            <img src="{{cerveja.url}}" width="300" height="300">
+        </div>
+        <div class="col-md-8">
+            <p class="text-center" style="color:#d43f3a"><strong>{{cerveja.nome}}</strong></p>
+            <p class="text-center" style="color:#d43f3a"><strong>Tipo - {{cerveja.tipo}}</strong></p>
+            <p style="color:#d43f3a; text-align: justify;"><strong>{{cerveja.descricao}}</strong></p>
+            <br>
+            <a [routerLink]="['/pedido/cerveja', cerveja.id]" type="button" class="btn btn-warning btCeva">Pedir uma degustação</a>
+        </div>
+    </div>
+</div>

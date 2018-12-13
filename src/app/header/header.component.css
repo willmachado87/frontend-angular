@@ -1,0 +1,11 @@
+.loginBtn {    
+    margin: 9% 0% 0% 0%;
+    border: none;
+    text-align: center;
+    line-height: 29px;
+    white-space: nowrap;
+    border-radius: 6px;
+    font-size: 9px;
+    color: #FFF;
+    background: #4267b2;
+}

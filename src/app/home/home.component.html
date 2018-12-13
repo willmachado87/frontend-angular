@@ -1,0 +1,13 @@
+<!-- Container (The Band Section) -->
+<div class="container text-center">
+    <h3>Cervejas</h3>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let ceva of cervejas">
+            <p class="text-center" style="color:#d43f3a"><strong>{{ceva.nome}}</strong></p>
+            <img src="{{ceva.url}}" width="200" height="200">
+            <p class="text-center" style="color:#d43f3a"><strong>Tipo: {{ceva.tipo}}</strong></p>
+            <a [routerLink]="['/desc', ceva.id]" type="button" class="btn btn-warning btCeva">Descrição</a>
+
+        </div>
+    </div>
+</div>

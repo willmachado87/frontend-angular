@@ -1,0 +1,25 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand"  [routerLink]="['cerveja']">Tomando Todas</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a [routerLink]="['cerveja']">Cervejas</a></li>
+                <li><a [routerLink]="['cerveja']">Quem Somos</a></li>
+                <li><a [routerLink]="['cerveja']">Contato</a></li>
+                <li  *ngIf="logado == false"><button class="loginBtn" (click)="login()">
+                    Login Com Facebook
+                  </button>
+                </li>
+                <li *ngIf="logado == true"><a href="" (click)="sair()">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
